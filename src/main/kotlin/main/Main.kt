@@ -11,10 +11,10 @@ fun main() {
 
     val gray = ImageService.loadImage(ImageReader.testPath).toGrayScale()
 
-   val readString = OCR.readFromImage(gray)
+    val readString = OCR.readFromImage(gray)
 
+    println(readString)
 
-
-    ImageService.saveImage(gray, "src/main/kotlin/pipeline/screen","testOut" )
+    ImageService.saveImage(gray, "src/main/kotlin/pipeline/screen", "testOut")
 
 }
