@@ -1,5 +1,6 @@
-package keyboardSim
+package keyboard.keboardsim
 
+import keyboard.keyboardtrans.toExtKey
 import java.awt.Robot
 import java.awt.event.KeyEvent
 
@@ -28,7 +29,7 @@ object KeyBoard {
 
     fun writeWord(word: String) = word.uppercase().forEach {
         click(
-            it.toKey(),
+            it.toExtKey(),
             it.isUpperCase()
         )
     }
@@ -36,23 +37,6 @@ object KeyBoard {
 
 }
 
-fun Char.toKey() = when {
-    this == 'A' -> KeyEvent.VK_A
-    this == 'B' -> KeyEvent.VK_B
-    this == 'C' -> KeyEvent.VK_C
-    this == 'D' -> KeyEvent.VK_D
-    this == 'E' -> KeyEvent.VK_E
-    this == 'F' -> KeyEvent.VK_F
-    this == 'G' -> KeyEvent.VK_G
-    this == 'B' -> KeyEvent.VK_B
-    this == 'B' -> KeyEvent.VK_B
-    this == 'B' -> KeyEvent.VK_B
-    this == 'B' -> KeyEvent.VK_B
-    this == 'B' -> KeyEvent.VK_B
-    this == 'B' -> KeyEvent.VK_B
-    this == 'B' -> KeyEvent.VK_B
 
-    else -> KeyEvent.VK_0
-}
 
 

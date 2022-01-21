@@ -1,4 +1,4 @@
-package ocr
+package pipeline.ocr
 
 import net.sourceforge.tess4j.Tesseract
 import java.awt.image.BufferedImage

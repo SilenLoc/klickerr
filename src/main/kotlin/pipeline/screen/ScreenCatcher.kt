@@ -1,4 +1,4 @@
-package screenreader
+package pipeline.screen
 
 import java.awt.Rectangle
 import java.awt.Robot

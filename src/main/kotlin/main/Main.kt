@@ -1,15 +1,20 @@
 package main
 
 
-import imagereader.ImageReader
-import ocr.OCR
+import pipeline.cv.ImageService
+import pipeline.cv.toGrayScale
+import pipeline.imagereader.ImageReader
+import pipeline.ocr.OCR
 
 
 fun main() {
 
-   val string = OCR.readFromImage(ImageReader.read())
+    val gray = ImageService.loadImage(ImageReader.testPath).toGrayScale()
 
-   println(string)
+   val readString = OCR.readFromImage(gray)
 
+
+
+    ImageService.saveImage(gray, "src/main/kotlin/pipeline/screen","testOut" )
 
 }
