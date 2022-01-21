@@ -1,10 +1,15 @@
 package main
 
-import keyboardSim.KeyBoard
-import java.awt.Robot
+
+import imagereader.ImageReader
+import ocr.OCR
 
 
 fun main() {
 
-KeyBoard.writeWord("AABBJJJ")
+   val string = OCR.readFromImage(ImageReader.read())
+
+   println(string)
+
+
 }
